@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA24A80F16FC985900F08A68 /* PicRenamer.icns in Resources */ = {isa = PBXBuildFile; fileRef = EA24A80E16FC985900F08A68 /* PicRenamer.icns */; };
+		763A41231A9D600000D09E2B /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763A41221A9D600000D09E2B /* Image.xcassets */; };
 		EAB5EA7B16F4CB6A00FE639D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB5EA7A16F4CB6A00FE639D /* Cocoa.framework */; };
 		EAB5EA8516F4CB6A00FE639D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAB5EA8316F4CB6A00FE639D /* InfoPlist.strings */; };
 		EAB5EA8716F4CB6A00FE639D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5EA8616F4CB6A00FE639D /* main.m */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA24A80E16FC985900F08A68 /* PicRenamer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PicRenamer.icns; sourceTree = "<group>"; };
+		763A41221A9D600000D09E2B /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		EAB5EA7716F4CB6A00FE639D /* PicRenamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicRenamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB5EA7A16F4CB6A00FE639D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EAB5EA7D16F4CB6A00FE639D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -51,7 +51,6 @@
 		EAB5EA6E16F4CB6A00FE639D = {
 			isa = PBXGroup;
 			children = (
-				EA24A80E16FC985900F08A68 /* PicRenamer.icns */,
 				EAB5EA8016F4CB6A00FE639D /* PicRenamer */,
 				EAB5EA7916F4CB6A00FE639D /* Frameworks */,
 				EAB5EA7816F4CB6A00FE639D /* Products */,
@@ -93,6 +92,7 @@
 				EAB5EA8C16F4CB6A00FE639D /* PRAppDelegate.h */,
 				EAB5EA8D16F4CB6A00FE639D /* PRAppDelegate.m */,
 				EAB5EA8F16F4CB6A00FE639D /* MainMenu.xib */,
+				763A41221A9D600000D09E2B /* Image.xcassets */,
 				EAB5EA8116F4CB6A00FE639D /* Supporting Files */,
 			);
 			path = PicRenamer;
@@ -138,7 +138,7 @@
 			attributes = {
 				CLASSPREFIX = PR;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Tony@LZUOSS";
+				ORGANIZATIONNAME = "PrettyX";
 			};
 			buildConfigurationList = EAB5EA7216F4CB6A00FE639D /* Build configuration list for PBXProject "PicRenamer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -164,8 +164,8 @@
 			files = (
 				EAB5EA8516F4CB6A00FE639D /* InfoPlist.strings in Resources */,
 				EAB5EA8B16F4CB6A00FE639D /* Credits.rtf in Resources */,
+				763A41231A9D600000D09E2B /* Image.xcassets in Resources */,
 				EAB5EA9116F4CB6A00FE639D /* MainMenu.xib in Resources */,
-				EA24A80F16FC985900F08A68 /* PicRenamer.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +274,7 @@
 		EAB5EA9516F4CB6A00FE639D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PicRenamer/PicRenamer-Prefix.pch";
@@ -286,6 +287,7 @@
 		EAB5EA9616F4CB6A00FE639D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PicRenamer/PicRenamer-Prefix.pch";
