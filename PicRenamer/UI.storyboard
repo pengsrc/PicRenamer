@@ -358,9 +358,15 @@
                                     <items>
                                         <menuItem title="Show Toolbar" keyEquivalent="t" id="eGv-0f-5tK">
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="toggleToolbarShown:" target="Vo4-cb-xli" id="voM-n6-bAr"/>
+                                            </connections>
                                         </menuItem>
                                         <menuItem title="Customize Toolbar…" id="QFU-7c-V9B">
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="runToolbarCustomizationPalette:" target="Vo4-cb-xli" id="duY-pl-qwE"/>
+                                            </connections>
                                         </menuItem>
                                     </items>
                                 </menu>
@@ -369,13 +375,23 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Window" systemMenu="window" id="MzD-TP-M0r">
                                     <items>
-                                        <menuItem title="Minimize" keyEquivalent="m" id="rZ0-Cw-sox"/>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="rZ0-Cw-sox">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Vo4-cb-xli" id="Gk1-Pz-fl6"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Zoom" id="kUb-Mp-OnT">
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Vo4-cb-xli" id="weT-1e-TV3"/>
+                                            </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="eMH-4r-Nsy"/>
                                         <menuItem title="Bring All to Front" id="v5h-er-3HC">
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Vo4-cb-xli" id="BUr-ap-dWJ"/>
+                                            </connections>
                                         </menuItem>
                                     </items>
                                 </menu>
@@ -384,7 +400,11 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="I0j-oA-kGk">
                                     <items>
-                                        <menuItem title="MacTest Help" keyEquivalent="?" id="JMy-GE-Ore"/>
+                                        <menuItem title="MacTest Help" keyEquivalent="?" id="JMy-GE-Ore">
+                                            <connections>
+                                                <action selector="showHelp:" target="Vo4-cb-xli" id="oWO-8z-L0G"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -397,38 +417,147 @@
                 <customObject id="Vo4-cb-xli" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="acX-Eh-DKx" customClass="AppDelegate" customModule="PicRenamer" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="65" y="-125"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="ZHM-pp-sfv">
             <objects>
                 <windowController id="06O-hx-j2L" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="8rh-hN-1mX">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                    <window key="window" title="PicRenamer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="8rh-hN-1mX">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <rect key="contentRect" x="397" y="179" width="500" height="400"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <value key="minSize" type="size" width="500" height="400"/>
+                        <value key="maxSize" type="size" width="500" height="400"/>
                     </window>
                     <connections>
-                        <segue destination="YNJ-LP-UIo" kind="relationship" relationship="window.shadowedContentViewController" id="Qgu-Ww-oAZ"/>
+                        <segue destination="YNJ-LP-UIo" kind="relationship" relationship="window.shadowedContentViewController" id="jp5-75-yom"/>
                     </connections>
                 </windowController>
                 <customObject id="Dbf-7Y-K7C" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="439"/>
+            <point key="canvasLocation" x="87" y="324"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="DQx-An-N7h">
             <objects>
-                <viewController id="YNJ-LP-UIo" sceneMemberID="viewController">
+                <viewController id="YNJ-LP-UIo" customClass="ViewController" customModule="PicRenamer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="RCi-8l-IGj">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="yFT-zd-ms8">
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="400"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ncu-yx-8Ol">
+                                        <rect key="frame" x="109" y="4" width="92" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nXK-BI-GVO">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mUH-MG-sRb">
+                                        <rect key="frame" x="14" y="3" width="92" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MUd-v4-pcb">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <scrollView focusRingType="none" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpZ-b2-heU">
+                                        <rect key="frame" x="20" y="42" width="460" height="338"/>
+                                        <clipView key="contentView" id="O8N-aD-LnV">
+                                            <rect key="frame" x="1" y="17" width="438" height="276"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="Ncq-c7-dHb" id="gJE-Ms-Pem">
+                                                    <rect key="frame" x="0.0" y="0.0" width="438" height="276"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <size key="intercellSpacing" width="3" height="2"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                    <tableColumns>
+                                                        <tableColumn identifier="Before" editable="NO" width="209.5703125" minWidth="40" maxWidth="1000" id="V3g-GN-Jva">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Before">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </tableHeaderCell>
+                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="tsb-Nn-Yte">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                        </tableColumn>
+                                                        <tableColumn identifier="After" editable="NO" width="244" minWidth="40" maxWidth="1000" id="CpQ-gT-hLl">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="After">
+                                                                <font key="font" metaFont="smallSystem"/>
+                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </tableHeaderCell>
+                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="FF4-Bm-Goa">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                        </tableColumn>
+                                                    </tableColumns>
+                                                </tableView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="3nQ-MX-4OD">
+                                            <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="8uS-Sd-tAe">
+                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <tableHeaderView key="headerView" id="Ncq-c7-dHb">
+                                            <rect key="frame" x="0.0" y="0.0" width="438" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableHeaderView>
+                                    </scrollView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TPE-nc-3FZ">
+                                        <rect key="frame" x="394" y="3" width="92" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Bfh-xI-KoM"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="push" title="Rename" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TvI-wk-vfp">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qpZ-b2-heU" firstAttribute="leading" secondItem="yFT-zd-ms8" secondAttribute="leading" constant="20" id="125-t3-kA5"/>
+                                    <constraint firstItem="qpZ-b2-heU" firstAttribute="top" secondItem="yFT-zd-ms8" secondAttribute="top" constant="20" id="ArA-uA-JpF"/>
+                                    <constraint firstItem="Ncu-yx-8Ol" firstAttribute="top" secondItem="qpZ-b2-heU" secondAttribute="bottom" constant="10" id="K8O-Yi-V1M"/>
+                                    <constraint firstAttribute="bottom" secondItem="TPE-nc-3FZ" secondAttribute="bottom" constant="10" id="Ps8-I8-Jic"/>
+                                    <constraint firstItem="Ncu-yx-8Ol" firstAttribute="width" secondItem="TPE-nc-3FZ" secondAttribute="width" id="TVV-77-PjO"/>
+                                    <constraint firstItem="Ncu-yx-8Ol" firstAttribute="width" secondItem="mUH-MG-sRb" secondAttribute="width" id="XWh-Zs-zgU"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPE-nc-3FZ" secondAttribute="trailing" constant="20" id="aZs-v2-lMm"/>
+                                    <constraint firstAttribute="bottom" secondItem="mUH-MG-sRb" secondAttribute="bottom" constant="10" id="d5y-Je-ThV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ncu-yx-8Ol" secondAttribute="bottom" constant="11" id="jQ4-so-4tx"/>
+                                    <constraint firstAttribute="trailing" secondItem="qpZ-b2-heU" secondAttribute="trailing" constant="20" id="jpU-5C-zPX"/>
+                                    <constraint firstItem="Ncu-yx-8Ol" firstAttribute="leading" secondItem="mUH-MG-sRb" secondAttribute="trailing" constant="15" id="xDV-1t-Wwl"/>
+                                    <constraint firstItem="mUH-MG-sRb" firstAttribute="leading" secondItem="yFT-zd-ms8" secondAttribute="leading" constant="20" id="zMa-78-VT0"/>
+                                </constraints>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="yFT-zd-ms8" firstAttribute="top" secondItem="RCi-8l-IGj" secondAttribute="top" id="96e-PV-adT"/>
+                            <constraint firstAttribute="trailing" secondItem="yFT-zd-ms8" secondAttribute="trailing" id="MuF-XQ-GVq"/>
+                            <constraint firstItem="yFT-zd-ms8" firstAttribute="leading" secondItem="RCi-8l-IGj" secondAttribute="leading" id="osn-ba-h9u"/>
+                            <constraint firstAttribute="bottom" secondItem="yFT-zd-ms8" secondAttribute="bottom" id="uhB-gU-jKB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="JDg-oa-BpI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794" y="414"/>
+            <point key="canvasLocation" x="87" y="910"/>
         </scene>
     </scenes>
 </document>

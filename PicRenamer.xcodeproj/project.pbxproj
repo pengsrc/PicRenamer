@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761921151A9EB21D00D81EB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761921141A9EB21D00D81EB3 /* ViewController.swift */; };
 		763A41231A9D600000D09E2B /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 763A41221A9D600000D09E2B /* Image.xcassets */; };
 		763A41261A9D660000D09E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A41251A9D660000D09E2B /* AppDelegate.swift */; };
 		76AF54A21A9DF7E1001A7724 /* UI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76AF54A11A9DF7E1001A7724 /* UI.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		761921141A9EB21D00D81EB3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		763A41221A9D600000D09E2B /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		763A41241A9D65FF00D09E2B /* PicRenamer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PicRenamer-Bridging-Header.h"; sourceTree = "<group>"; };
 		763A41251A9D660000D09E2B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				EAB5EA8D16F4CB6A00FE639D /* PRAppDelegate.m */,
 				EAB5EA8F16F4CB6A00FE639D /* MainMenu.xib */,
 				763A41251A9D660000D09E2B /* AppDelegate.swift */,
+				761921141A9EB21D00D81EB3 /* ViewController.swift */,
 				76AF54A11A9DF7E1001A7724 /* UI.storyboard */,
 				763A41221A9D600000D09E2B /* Image.xcassets */,
 				EAB5EA8116F4CB6A00FE639D /* Supporting Files */,
@@ -184,6 +187,7 @@
 			files = (
 				763A41261A9D660000D09E2B /* AppDelegate.swift in Sources */,
 				EAB5EA8E16F4CB6A00FE639D /* PRAppDelegate.m in Sources */,
+				761921151A9EB21D00D81EB3 /* ViewController.swift in Sources */,
 				EAB5EA9F16F4D74600FE639D /* PRFileInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
