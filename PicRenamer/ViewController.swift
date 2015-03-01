@@ -10,11 +10,39 @@ import Cocoa
 
 class ViewController: NSViewController, NSTableViewDataSource, NSTabViewDelegate {
 
+    @IBOutlet weak var table: NSTableView!
+    var allFilesInfo = Array<String>()
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+        allFilesInfo.append("abc")
     }
     
+    func updateUI(){
+        self.table.reloadData()
+        self.table.setNeedsDisplay()
+    }
     
+    @IBAction func openFiles(sender: NSButton) {
+        
+        self.updateUI()
+    }
+    
+    @IBAction func clearFiles(sender: NSButton) {
+        self.allFilesInfo.removeAll(keepCapacity: false)
+        self.updateUI()
+    }
+    
+    @IBAction func renameFiles(sender: NSButton) {
+        
+        self.updateUI()
+    }
+    
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        return self.allFilesInfo.count
+    }
+    
+    func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
+        return self.allFilesInfo[row]
+    }
     
 }
