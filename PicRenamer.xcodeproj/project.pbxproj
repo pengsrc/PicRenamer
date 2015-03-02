@@ -14,9 +14,6 @@
 		EAB5EA7B16F4CB6A00FE639D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB5EA7A16F4CB6A00FE639D /* Cocoa.framework */; };
 		EAB5EA8516F4CB6A00FE639D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAB5EA8316F4CB6A00FE639D /* InfoPlist.strings */; };
 		EAB5EA8B16F4CB6A00FE639D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EAB5EA8916F4CB6A00FE639D /* Credits.rtf */; };
-		EAB5EA8E16F4CB6A00FE639D /* PRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5EA8D16F4CB6A00FE639D /* PRAppDelegate.m */; };
-		EAB5EA9116F4CB6A00FE639D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAB5EA8F16F4CB6A00FE639D /* MainMenu.xib */; };
-		EAB5EA9F16F4D74600FE639D /* PRFileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB5EA9E16F4D74600FE639D /* PRFileInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +31,6 @@
 		EAB5EA8416F4CB6A00FE639D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EAB5EA8816F4CB6A00FE639D /* PicRenamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PicRenamer-Prefix.pch"; sourceTree = "<group>"; };
 		EAB5EA8A16F4CB6A00FE639D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		EAB5EA8C16F4CB6A00FE639D /* PRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRAppDelegate.h; sourceTree = "<group>"; };
-		EAB5EA8D16F4CB6A00FE639D /* PRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRAppDelegate.m; sourceTree = "<group>"; };
-		EAB5EA9016F4CB6A00FE639D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		EAB5EA9D16F4D74600FE639D /* PRFileInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRFileInfo.h; sourceTree = "<group>"; };
-		EAB5EA9E16F4D74600FE639D /* PRFileInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRFileInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +84,6 @@
 		EAB5EA8016F4CB6A00FE639D /* PicRenamer */ = {
 			isa = PBXGroup;
 			children = (
-				EAB5EA9D16F4D74600FE639D /* PRFileInfo.h */,
-				EAB5EA9E16F4D74600FE639D /* PRFileInfo.m */,
-				EAB5EA8C16F4CB6A00FE639D /* PRAppDelegate.h */,
-				EAB5EA8D16F4CB6A00FE639D /* PRAppDelegate.m */,
-				EAB5EA8F16F4CB6A00FE639D /* MainMenu.xib */,
 				763A41251A9D660000D09E2B /* AppDelegate.swift */,
 				761921141A9EB21D00D81EB3 /* ViewController.swift */,
 				76AF54A11A9DF7E1001A7724 /* UI.storyboard */,
@@ -174,7 +161,6 @@
 				EAB5EA8B16F4CB6A00FE639D /* Credits.rtf in Resources */,
 				76AF54A21A9DF7E1001A7724 /* UI.storyboard in Resources */,
 				763A41231A9D600000D09E2B /* Image.xcassets in Resources */,
-				EAB5EA9116F4CB6A00FE639D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,9 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				763A41261A9D660000D09E2B /* AppDelegate.swift in Sources */,
-				EAB5EA8E16F4CB6A00FE639D /* PRAppDelegate.m in Sources */,
 				761921151A9EB21D00D81EB3 /* ViewController.swift in Sources */,
-				EAB5EA9F16F4D74600FE639D /* PRFileInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,14 +193,6 @@
 				EAB5EA8A16F4CB6A00FE639D /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		EAB5EA8F16F4CB6A00FE639D /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAB5EA9016F4CB6A00FE639D /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
