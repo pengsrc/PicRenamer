@@ -3,6 +3,12 @@ PicRenamer
 A Mac OS X application to help you rename your photos with their Exif date and time.
 
 
+Version 1.1
+-----------
+![screenshot](Screenshots/PicRenamerV1.1.png)
+* Improve user interface.
+
+
 Version 1.0
 -----------
 ![screenshot](Screenshots/PicRenamerV1.0.png)
